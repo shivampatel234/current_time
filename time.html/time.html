@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>display time  on webisite-easy tutorial</title>
+        <link rel="stylesheet" href=>
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0;
+                margin:0;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+                .container{
+                    width:100%;
+                    height: 100vh;
+                    background: #ffe3e3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                }
+                .container img{
+                    width:90%
+                
+                }
+                .container h1{
+                    position:absolute;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color:#fff;
+                    font-size:90px;
+                    font-weight: 600;
+                    letter-spacing: 3px;
+                
+                }
+                .quotes{
+                    position: absolute;
+                    margin-top: 300px;
+                    color: #fff;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 500;
+                
+                }
+                .quotes h2{
+                    font-size: 50px;
+                    margin-top: 10px;
+                    font-weight: 500;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="monu.jpg">
+            <h1 id="current-time"></h1>
+            <div class="quotes">
+                <p>TODAY'S QUOTES</p>
+                <h2>Lost time is never found again.</h2>
+            </div>
+
+        </div>
+
+        <script>
+            let time = document.getElementById('current-time');
+
+            setInterval(() =>{
+            let d = new Date();
+            time.innerHTML = d.toLocaleTimeString();
+            },1000)
+        </script>
+
+    </body>
+</html>
